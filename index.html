@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jorge Franco — Desarrollo a la medida</title>
-<meta name="description" content="Desarrollo de aplicaciones, automatización e inteligencia artificial a la medida para hacer crecer tu negocio.">
+<title>Jorge Franco — Soluciones tecnológicas a la medida</title>
+<meta name="description" content="Soluciones tecnológicas a la medida: desarrollo de software, automatización e inteligencia artificial para hacer crecer tu negocio.">
 <style>
   :root{
     --bg:#04060c; --bg2:#080d1a; --teal:#0d1531; --accent:#8b5cf6; --cyan:#22d3ee;
@@ -144,6 +144,20 @@
   .photo-frame{border-radius:32px}
   nav{background:rgba(4,6,12,.82)}
   .final{background:linear-gradient(135deg,rgba(139,92,246,.17),rgba(34,211,238,.10))}
+
+  /* ejemplos antes/despues */
+  .flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .flip{perspective:1200px;height:235px}
+  .flip-in{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
+  .flip:hover .flip-in,.flip:focus-within .flip-in{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;padding:24px;border:1px solid var(--line);background:var(--card);display:flex;flex-direction:column;gap:10px}
+  .face .tag{align-self:flex-start;font-size:.75rem;font-weight:800;letter-spacing:.14em;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--muted)}
+  .face h3{font-size:1.08rem}
+  .face p{color:var(--soft);font-size:.95rem;line-height:1.55}
+  .face.back{transform:rotateY(180deg);background:linear-gradient(150deg,rgba(139,92,246,.35),rgba(34,211,238,.18));border-color:rgba(139,92,246,.6)}
+  .face.back .tag{background:var(--accent);color:#fff}
+  .face.back p{color:#e9e4ff}
+  .flip .turn{margin-top:auto;color:var(--muted);font-size:.82rem}
 </style>
 </head>
 <body>
@@ -153,7 +167,7 @@
 <nav><div class="nav-in">
   <div class="logo">JORGE<span>FRANCO</span></div>
   <div class="links">
-    <a href="#servicios">Servicios</a><a href="#habilidades">Habilidades</a><a href="#lenguajes">Lenguajes</a><a href="#proceso">Proceso</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
+    <a href="#servicios">Servicios</a><a href="#ejemplos">Ejemplos</a><a href="#habilidades">Habilidades</a><a href="#lenguajes">Lenguajes</a><a href="#proceso">Proceso</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a>
   </div>
 </div></nav>
 
@@ -161,9 +175,9 @@
   <header>
     <div class="reveal on">
       <div class="kicker">Jorge Franco · El Salvador</div>
-      <h1>DESARROLLO<br><span class="grad">A LA MEDIDA</span></h1>
+      <h1>SOLUCIONES<br><span class="grad">TECNOLÓGICAS</span></h1>
       <div class="typed-line">Especialista en <span id="typed"></span><span class="cursor"></span></div>
-      <p class="lead">Aplicaciones, automatización e inteligencia artificial para hacer crecer tu negocio y ahorrar horas de trabajo manual.</p>
+      <p class="lead">Desarrollo de software, aplicaciones, automatización e inteligencia artificial: tecnología que trabaja por tu negocio y te ahorra horas de trabajo manual.</p>
       <div class="btns">
         <a class="cta" href="mailto:jadalperez@gmail.com">Escríbeme y conversemos</a>
         <a class="ghost" href="#servicios">Ver servicios</a>
@@ -184,8 +198,8 @@
   </header>
 
   <div class="marquee"><div class="track" id="track">
-    <span>APLICACIONES <i>✦</i> WEB <i>✦</i> AUTOMATIZACIÓN <i>✦</i> INTELIGENCIA ARTIFICIAL <i>✦</i> POWER APPS <i>✦</i> INTEGRACIONES <i>✦</i>&nbsp;</span>
-    <span>APLICACIONES <i>✦</i> WEB <i>✦</i> AUTOMATIZACIÓN <i>✦</i> INTELIGENCIA ARTIFICIAL <i>✦</i> POWER APPS <i>✦</i> INTEGRACIONES <i>✦</i>&nbsp;</span>
+    <span>APLICACIONES <i>✦</i> WEB <i>✦</i> AUTOMATIZACIÓN <i>✦</i> INTELIGENCIA ARTIFICIAL <i>✦</i> SOLUCIONES TECNOLÓGICAS <i>✦</i> INTEGRACIONES <i>✦</i>&nbsp;</span>
+    <span>APLICACIONES <i>✦</i> WEB <i>✦</i> AUTOMATIZACIÓN <i>✦</i> INTELIGENCIA ARTIFICIAL <i>✦</i> SOLUCIONES TECNOLÓGICAS <i>✦</i> INTEGRACIONES <i>✦</i>&nbsp;</span>
   </div></div>
 
   <section id="servicios">
@@ -199,22 +213,30 @@
     </div>
   </section>
 
+  <section id="ejemplos">
+    <h2 class="reveal">Ejemplos de automatización</h2>
+    <p class="sub reveal">Así se ve el cambio cuando un proceso manual se convierte en un sistema que trabaja solo. Gira cada tarjeta y descubre el «después».</p>
+    <div class="flips">
+      <div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>📋 Formularios en papel</h3><p>Se llenan a mano, se pierden, se digitan dos veces y los errores aparecen días después.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>📋 Formularios en papel</h3><p>Una app móvil con fotos, firma y ubicación: el dato nace digital y llega a la oficina en segundos.</p></div></div></div><div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>📊 Reportes eternos</h3><p>Alguien copia y pega datos en Excel cada semana para armar el mismo reporte de siempre.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>📊 Reportes eternos</h3><p>El reporte se genera y se envía solo, con datos frescos, sin que nadie toque una celda.</p></div></div></div><div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>✉️ Aprobaciones perdidas</h3><p>Las solicitudes se quedan esperando en bandejas de correo saturadas y nadie sabe en qué van.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>✉️ Aprobaciones perdidas</h3><p>Un flujo de aprobación con notificaciones, recordatorios y trazabilidad de cada paso.</p></div></div></div><div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>🔁 Digitar dos veces</h3><p>El mismo dato se escribe en el correo, en la hoja de cálculo y en el sistema, una y otra vez.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>🔁 Digitar dos veces</h3><p>Los sistemas se conectan entre sí: el dato se captura una sola vez y fluye a donde debe ir.</p></div></div></div><div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>💬 Responder lo mismo 100 veces</h3><p>El equipo pierde el día contestando las mismas preguntas por chat y correo.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>💬 Responder lo mismo 100 veces</h3><p>Un asistente con inteligencia artificial responde lo frecuente y pasa a una persona solo lo importante.</p></div></div></div><div class="flip reveal" tabindex="0"><div class="flip-in"><div class="face front"><span class="tag">ANTES</span><h3>📦 Inventario a ciegas</h3><p>El control vive en cuadernos y hojas sueltas: nadie sabe qué hay hasta que falta.</p><span class="turn">Pasa el cursor o toca para ver el después ↻</span></div><div class="face back"><span class="tag">DESPUÉS</span><h3>📦 Inventario a ciegas</h3><p>Inventario en tiempo real con alertas automáticas cuando algo está por agotarse.</p></div></div></div>
+    </div>
+  </section>
+
   <section id="habilidades">
     <h2 class="reveal">Habilidades</h2>
     <p class="sub reveal">Las herramientas con las que convierto ideas en sistemas que trabajan solos.</p>
     <div class="bars">
-      <div class="bar reveal"><label>Power Apps y Microsoft 365 <span>●</span></label><div class="rail"><div class="fill" data-w="92%"></div></div></div>
+      <div class="bar reveal"><label>Desarrollo de aplicaciones <span>●</span></label><div class="rail"><div class="fill" data-w="92%"></div></div></div>
       <div class="bar reveal"><label>Automatización de procesos <span>●</span></label><div class="rail"><div class="fill" data-w="90%"></div></div></div>
       <div class="bar reveal"><label>Inteligencia artificial y agentes <span>●</span></label><div class="rail"><div class="fill" data-w="88%"></div></div></div>
-      <div class="bar reveal"><label>Desarrollo web e integraciones <span>●</span></label><div class="rail"><div class="fill" data-w="85%"></div></div></div>
+      <div class="bar reveal"><label>Integraciones y APIs <span>●</span></label><div class="rail"><div class="fill" data-w="85%"></div></div></div>
     </div>
   </section>
 
   <section id="lenguajes">
     <h2 class="reveal">Lenguajes de programación</h2>
-    <p class="sub reveal">El stack que combina con mi perfil: construir apps empresariales, conectar sistemas, automatizar procesos y publicar soluciones web.</p>
+    <p class="sub reveal">El stack que combina con mi perfil: construir software, conectar sistemas, automatizar procesos y publicar soluciones web.</p>
     <div class="lang-grid">
-      <div class="lang reveal"><div class="sym">Fx</div><strong>Power Fx</strong><small>Fórmulas y lógica en Power Apps</small></div>
+      
       <div class="lang reveal"><div class="sym">JS</div><strong>JavaScript</strong><small>Web, integraciones y lógica dinámica</small></div>
       <div class="lang reveal"><div class="sym">TS</div><strong>TypeScript</strong><small>Código web más ordenado y seguro</small></div>
       <div class="lang reveal"><div class="sym">Py</div><strong>Python</strong><small>Automatización, datos e IA</small></div>
@@ -222,12 +244,14 @@
       <div class="lang reveal"><div class="sym">SQL</div><strong>SQL</strong><small>Consultas, reportes y datos</small></div>
       <div class="lang reveal"><div class="sym">&lt;/&gt;</div><strong>HTML5</strong><small>Estructura de sitios y portales</small></div>
       <div class="lang reveal"><div class="sym">CSS</div><strong>CSS3</strong><small>Diseño moderno y responsivo</small></div>
+      <div class="lang reveal"><div class="sym">Fx</div><strong>Power Fx</strong><small>Fórmulas y lógica en Power Apps</small></div>
     </div>
     <div class="code-card reveal"><pre><span class="dot">const</span> perfil = {
-  apps: [<span class="dot">"Power Apps"</span>, <span class="dot">"Power Fx"</span>],
+  soluciones: [<span class="dot">"Software a la medida"</span>, <span class="dot">"Automatización"</span>],
   web: [<span class="dot">"JavaScript"</span>, <span class="dot">"TypeScript"</span>, <span class="dot">"HTML"</span>, <span class="dot">"CSS"</span>],
   datos_ia: [<span class="dot">"Python"</span>, <span class="dot">"SQL"</span>, <span class="dot">"C#"</span>]
 };</pre></div>
+    <p class="sub reveal" style="margin-top:18px">También trabajo con plataformas como Microsoft 365, Power Platform (Power Apps, Power Automate), SharePoint y APIs REST, según lo que tu proyecto necesite.</p>
   </section>
 
   <section id="proceso">
@@ -244,7 +268,7 @@
   <section id="sobre-mi">
     <h2 class="reveal">Sobre mí</h2>
     <div class="about reveal" style="margin-top:22px">
-      <p>Soy desarrollador de software en El Salvador. Ayudo a empresas y emprendedores a convertir procesos manuales en soluciones digitales: aplicaciones a la medida, automatización e inteligencia artificial aplicada al trabajo diario. Mi enfoque es simple: entender tu operación, construir justo lo que necesitas y acompañarte hasta ver el resultado funcionando.</p>
+      <p>Soy desarrollador de software en El Salvador y me enfoco en soluciones tecnológicas completas: desarrollo web y de aplicaciones, automatización de procesos, integraciones entre sistemas e inteligencia artificial aplicada. Trabajo con lenguajes como JavaScript, TypeScript, Python, C# y SQL, y con plataformas como Microsoft 365 y Power Platform cuando son la mejor opción para el proyecto. Mi enfoque es simple: entender tu operación, construir justo lo que necesitas y acompañarte hasta ver el resultado funcionando.</p>
     </div>
   </section>
 
@@ -255,7 +279,7 @@
   </div>
 
   <footer>
-    <span>© <span id="year"></span> Jorge Franco — Desarrollo a la medida</span>
+    <span>© <span id="year"></span> Jorge Franco — Soluciones tecnológicas a la medida</span>
     <span>El Salvador · <a href="mailto:jadalperez@gmail.com">jadalperez@gmail.com</a> · <a href="https://github.com/jadalperez" target="_blank" rel="noopener">GitHub</a></span>
   </footer>
 </div>
@@ -272,7 +296,7 @@
   }, {passive:true});
 
   // Texto que se escribe solo
-  const words = ['aplicaciones a la medida','automatización de procesos','inteligencia artificial','soluciones web','integraciones'];
+  const words = ['soluciones tecnológicas','aplicaciones a la medida','automatización de procesos','inteligencia artificial','soluciones web','integraciones'];
   const el = document.getElementById('typed');
   let wi = 0, ci = 0, del = false;
   (function type(){
